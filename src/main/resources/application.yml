@@ -11,7 +11,7 @@ spring:
     vault:
       generic:
         enabled: false
-      host: vault.vault.svc.cluster.local
+      host: ${VAULT_ADDR}
       port: 8200
       scheme: http
       authentication: KUBERNETES
