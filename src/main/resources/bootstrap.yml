@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: vault-demo
+  cloud:
+    vault:
+      generic:
+        enabled: false
+      host: ${VAULT_ADDR}
+      port: 8200
+      scheme: http
+      authentication: KUBERNETES
+      kubernetes:
+        role: myapprole
+        service-account-token-file: /var/run/secrets/kubernetes.io/serviceaccount/token
+      config:
+        order: 10
